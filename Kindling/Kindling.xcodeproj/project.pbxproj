@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B6E7E50F1BE7E74100BD367B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E50E1BE7E74100BD367B /* AppDelegate.swift */; };
-		B6E7E5111BE7E74100BD367B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E5101BE7E74100BD367B /* ViewController.swift */; };
 		B6E7E5141BE7E74100BD367B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E7E5121BE7E74100BD367B /* Main.storyboard */; };
 		B6E7E5161BE7E74100BD367B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E7E5151BE7E74100BD367B /* Assets.xcassets */; };
 		B6E7E5191BE7E74100BD367B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E7E5171BE7E74100BD367B /* LaunchScreen.storyboard */; };
 		B6E7E5241BE7E74100BD367B /* KindlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E5231BE7E74100BD367B /* KindlingTests.swift */; };
 		B6E7E52F1BE7E74100BD367B /* KindlingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E52E1BE7E74100BD367B /* KindlingUITests.swift */; };
+		B6E7E53E1BE7E8EA00BD367B /* RootPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E53D1BE7E8EA00BD367B /* RootPresentationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6E7E5401BE7EBA200BD367B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E53F1BE7EBA200BD367B /* CardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6E7E5421BE7F4C900BD367B /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7E5411BE7F4C900BD367B /* RoundedImageView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		B6E7E50B1BE7E74100BD367B /* Kindling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E7E50E1BE7E74100BD367B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6E7E5101BE7E74100BD367B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6E7E5131BE7E74100BD367B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6E7E5151BE7E74100BD367B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E7E5181BE7E74100BD367B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		B6E7E52A1BE7E74100BD367B /* KindlingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KindlingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E7E52E1BE7E74100BD367B /* KindlingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindlingUITests.swift; sourceTree = "<group>"; };
 		B6E7E5301BE7E74100BD367B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E7E53D1BE7E8EA00BD367B /* RootPresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresentationViewController.swift; sourceTree = "<group>"; };
+		B6E7E53F1BE7EBA200BD367B /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		B6E7E5411BE7F4C900BD367B /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,11 @@
 		B6E7E50D1BE7E74100BD367B /* Kindling */ = {
 			isa = PBXGroup;
 			children = (
-				B6E7E50E1BE7E74100BD367B /* AppDelegate.swift */,
-				B6E7E5101BE7E74100BD367B /* ViewController.swift */,
-				B6E7E5121BE7E74100BD367B /* Main.storyboard */,
+				B6E7E5431BE7F4F700BD367B /* AppDelegate */,
+				B6E7E5441BE7F50100BD367B /* Storyboards */,
+				B6E7E5451BE7F51E00BD367B /* Views */,
+				B6E7E53C1BE7E8AF00BD367B /* ViewControllers */,
 				B6E7E5151BE7E74100BD367B /* Assets.xcassets */,
-				B6E7E5171BE7E74100BD367B /* LaunchScreen.storyboard */,
 				B6E7E51A1BE7E74100BD367B /* Info.plist */,
 			);
 			path = Kindling;
@@ -123,6 +127,40 @@
 				B6E7E5301BE7E74100BD367B /* Info.plist */,
 			);
 			path = KindlingUITests;
+			sourceTree = "<group>";
+		};
+		B6E7E53C1BE7E8AF00BD367B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6E7E53D1BE7E8EA00BD367B /* RootPresentationViewController.swift */,
+				B6E7E53F1BE7EBA200BD367B /* CardViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6E7E5431BE7F4F700BD367B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B6E7E50E1BE7E74100BD367B /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B6E7E5441BE7F50100BD367B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B6E7E5171BE7E74100BD367B /* LaunchScreen.storyboard */,
+				B6E7E5121BE7E74100BD367B /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B6E7E5451BE7F51E00BD367B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6E7E5411BE7F4C900BD367B /* RoundedImageView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E7E5111BE7E74100BD367B /* ViewController.swift in Sources */,
+				B6E7E5421BE7F4C900BD367B /* RoundedImageView.swift in Sources */,
+				B6E7E53E1BE7E8EA00BD367B /* RootPresentationViewController.swift in Sources */,
 				B6E7E50F1BE7E74100BD367B /* AppDelegate.swift in Sources */,
+				B6E7E5401BE7EBA200BD367B /* CardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
