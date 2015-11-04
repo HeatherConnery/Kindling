@@ -29,9 +29,9 @@ class RootPresentationViewController: UIViewController {
         case .Ended:
             centerConstraint.constant = 0
             if selectionState == SelectionState.LikeSelection {
-                performSegueWithIdentifier("LikeSegue", sender: sender)
+                performSegueWithIdentifier("LikeSegue", sender: self)
             } else if selectionState == SelectionState.DislikeSelection {
-                performSegueWithIdentifier("DislikeSegue", sender: sender)
+                performSegueWithIdentifier("DislikeSegue", sender: self)
             }
             
         default:
