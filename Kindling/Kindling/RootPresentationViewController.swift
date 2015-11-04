@@ -10,6 +10,14 @@ import UIKit
 
 class RootPresentationViewController: UIViewController {
     
+    var selectionState: SelectionState = .NoSelection
+    
+    enum SelectionState {
+        case NoSelection
+        case LikeSelection
+        case DislikeSelection
+    }
+    
    
     @IBAction func didPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
@@ -20,25 +28,31 @@ class RootPresentationViewController: UIViewController {
             print("begin")
         case .Ended:
             centerConstraint.constant = 0
+            if selectionState == SelectionState.LikeSelection {
+                performSegueWithIdentifier("LikeSegue", sender: sender)
+            } else if selectionState == SelectionState.DislikeSelection {
+                performSegueWithIdentifier("DislikeSegue", sender: sender)
+            }
+            
         default:
             centerConstraint.constant = translation.x
             
-            if centerConstraint.constant > view.bounds.width / 2 {
+            if centerConstraint.constant >= view.bounds.width / 2 {
                 centerConstraint.constant = view.bounds.width / 2
-            } else if centerConstraint.constant < -view.bounds.width / 2 {
+                selectionState = .LikeSelection
+            } else if centerConstraint.constant <= -view.bounds.width / 2 {
                 centerConstraint.constant = -view.bounds.width / 2
+                selectionState = .DislikeSelection
             }
             view.layoutIfNeeded()
         }
-
+        print(selectionState)
     }
-    
     @IBOutlet weak var containerOutlet: RoundedImageView!
-    
     @IBOutlet weak var centerConstraint: NSLayoutConstraint!
     
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

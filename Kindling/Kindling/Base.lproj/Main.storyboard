@@ -64,6 +64,8 @@
                     <connections>
                         <outlet property="centerConstraint" destination="8Kt-lK-6eR" id="vFu-jK-mGk"/>
                         <outlet property="containerOutlet" destination="sSb-J2-S1B" id="sCX-Oo-dxG"/>
+                        <segue destination="0fj-6u-Fck" kind="show" identifier="LikeSegue" id="0j5-EE-wlG"/>
+                        <segue destination="ylN-mm-M7k" kind="show" identifier="DislikeSegue" id="2m2-LR-xJA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,6 +76,78 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1006" y="997"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d7H-6C-jDI">
+            <objects>
+                <viewController id="ylN-mm-M7k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o1V-77-2qg"/>
+                        <viewControllerLayoutGuide type="bottom" id="amb-Zt-KFR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OAY-9a-z3q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sadface" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-pQ-tJb">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="B2s-sS-8rh"/>
+                                    <constraint firstAttribute="height" constant="200" id="GzQ-G5-OQF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.59666496854760154" green="0.90780050035577853" blue="0.91736883726003482" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZOI-pQ-tJb" firstAttribute="centerX" secondItem="OAY-9a-z3q" secondAttribute="centerX" id="kgQ-yu-vtj"/>
+                            <constraint firstItem="ZOI-pQ-tJb" firstAttribute="centerY" secondItem="OAY-9a-z3q" secondAttribute="centerY" id="qOT-pP-Jvk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfZ-TG-tfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="1469"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j3v-uf-Ys9">
+            <objects>
+                <viewController id="0fj-6u-Fck" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V1g-1D-Xg8"/>
+                        <viewControllerLayoutGuide type="bottom" id="l9m-AD-Bba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kvi-gs-63s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyface" translatesAutoresizingMaskIntoConstraints="NO" id="krc-Ik-cCj">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="22S-do-IFK"/>
+                                    <constraint firstAttribute="height" constant="200" id="OWy-j6-NYv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.36491321840000002" green="0.49548314230000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="krc-Ik-cCj" firstAttribute="centerY" secondItem="kvi-gs-63s" secondAttribute="centerY" id="DWg-Gc-rfi"/>
+                            <constraint firstItem="krc-Ik-cCj" firstAttribute="centerX" secondItem="kvi-gs-63s" secondAttribute="centerX" id="EXo-Jy-0Sh"/>
+                            <constraint firstItem="krc-Ik-cCj" firstAttribute="top" secondItem="V1g-1D-Xg8" secondAttribute="bottom" constant="180" id="ZAP-xF-8jz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZAP-xF-8jz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ew-bh-5Va" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="604"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ayn-aL-5nU">
@@ -149,10 +223,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l77-40-Kib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="487"/>
+            <point key="canvasLocation" x="1006" y="1553"/>
         </scene>
     </scenes>
     <resources>
         <image name="appleEve" width="1920" height="1080"/>
+        <image name="happyface" width="224" height="225"/>
+        <image name="sadface" width="160" height="160"/>
     </resources>
 </document>
